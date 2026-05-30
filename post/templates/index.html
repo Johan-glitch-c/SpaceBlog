@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-content">
+        <div>
+            <h1>Stay curious.</h1>
+
+            <p>
+                Discover stories, thinking, and expertise from writers
+                on any topic.
+            </p>
+
+            <button class="hero-btn">
+                Start Reading
+            </button>
+        </div>
+
+        <div class="hero-image">
+            📚
+        </div>
+    </div>
+</section>
+
+<section class="articles">
+    <div class="container">
+
+        <h2>Trending Articles</h2>
+
+        <div class="articles-grid">
+
+            <article class="card">
+                <span class="tag">Technology</span>
+
+                <h3>Why Django Is Still Relevant in 2026</h3>
+
+                <p>
+                    Explore why Django remains one of the most productive
+                    frameworks for web development.
+                </p>
+
+                <div class="author">
+                    <span>John Smith</span>
+                    <span>5 min read</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="tag">Programming</span>
+
+                <h3>10 Python Tricks Every Developer Should Know</h3>
+
+                <p>
+                    Useful Python tips that can make your code cleaner
+                    and more efficient.
+                </p>
+
+                <div class="author">
+                    <span>Emma Wilson</span>
+                    <span>7 min read</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="tag">Design</span>
+
+                <h3>Minimalism in Modern Web Design</h3>
+
+                <p>
+                    How minimalism improves user experience and boosts
+                    readability.
+                </p>
+
+                <div class="author">
+                    <span>Alex Brown</span>
+                    <span>4 min read</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="tag">AI</span>
+
+                <h3>The Future of Artificial Intelligence</h3>
+
+                <p>
+                    Understanding where AI is heading and how it may
+                    impact everyday life.
+                </p>
+
+                <div class="author">
+                    <span>Michael Lee</span>
+                    <span>8 min read</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
