@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="blog-page">
+
+    <div class="container">
+
+        <h1 class="page-title">All Articles</h1>
+
+   <div class="filters">
+
+    <a href="?" class="filter-btn {% if not active_category %}active{% endif %}">
+        All
+    </a>
+
+    {% for category in categories %}
+        <a href="?category={{ category.id }}"
+           class="filter-btn {% if active_category == category.id|stringformat:'s' %}active{% endif %}">
+            {{ category.name }}
+        </a>
+    {% endfor %}
+
+</div>
+    {% for post in posts %}
+        <div class="posts-grid">
+            <article class="post-card">
+                <span class="category">{{post.category}}</span>
+
+                <h3>{{ post.name}}</h3>
+
+                <p>
+                    {{ post.description}}
+                </p>
+
+                <div class="post-footer">
+                    <span>{{ post.author}}</span>
+                    <span>{{ post.time_to_read}}</span>
+                </div>
+            </article>
+
+        </div>
+    {% endfor %}
+
+    </div>
+
+</section>
+{% endblock %}

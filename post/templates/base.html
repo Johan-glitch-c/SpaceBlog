@@ -15,11 +15,11 @@
 
 <header>
     <div class="container navbar">
-        <div class="logo">BlogSpace</div>
+        <div class="logo"><a href="{% url 'index' %}">BlogSpace</a></div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Articles</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'posts' %}">Articles</a>
             <a href="#">Categories</a>
             <a href="#">About</a>
         </nav>
