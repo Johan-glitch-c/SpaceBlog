@@ -17,7 +17,7 @@
         {% for category in category %}
         <div class="categories-grid">
 
-            <a href="#" class="category-card">
+            <a href="{% url 'post_categories' category.id %}" class="category-card">
                 <h3>{{ category.name }}</h3>
                 <p>{{category.post_set.count}}</p>
             </a>

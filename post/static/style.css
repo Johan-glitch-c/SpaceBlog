@@ -325,3 +325,112 @@ footer{
     }
 
 }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#fafafa;
+    color:#222;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.category-hero{
+    padding:100px 0 60px;
+    text-align:center;
+}
+
+.category-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:#f1f1f1;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.category-hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.category-hero p{
+    max-width:650px;
+    margin:auto;
+    color:#666;
+    line-height:1.7;
+}
+
+.posts-section{
+    padding-bottom:80px;
+}
+
+.posts-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.post-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #ececec;
+    transition:.3s;
+}
+
+.post-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.post-meta{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    color:#777;
+    font-size:14px;
+}
+
+.post-card h2{
+    margin-bottom:15px;
+    line-height:1.4;
+    font-size:26px;
+}
+
+.post-card p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.read-more{
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+}
+
+.read-more:hover{
+    opacity:.7;
+}
+
+@media(max-width:768px){
+
+    .category-hero h1{
+        font-size:42px;
+    }
+
+    .posts-grid{
+        grid-template-columns:1fr;
+    }
+
+}

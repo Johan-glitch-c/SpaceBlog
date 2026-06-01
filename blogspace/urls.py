@@ -18,11 +18,13 @@ from django.contrib import admin
 from post.views import index,post
 from django.urls import path
 from django.conf.urls.static import static
-from post.views import category
+from post.views import category,post_category
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",index,name='index'),
     path('posts/',post,name='posts'),
     path('category/',category,name='category'),
+
+    path('post_categories/<int:id>/',post_category,name='post_categories'),
 ]

@@ -37,3 +37,10 @@ def category(request):
     context = {'posts': posts, 'category': category,}
 
     return render(request,'categories.html',context)
+
+def post_category(request,id):
+    category_id = get_object_or_404(Category,id=id)
+    posts=Post.objects.filter(category_id=category_id)
+    context={'posts':posts,'category_id':category_id}
+
+    return render(request,'posts_by_categories.html',context)
