@@ -23,8 +23,14 @@
             <a href="{% url 'category' %}">Categories</a>
             <a href="#">About</a>
         </nav>
+        {% if user.is_authenticated %}
 
+        {% else %}
         <button class="btn">Get Started</button>
+        {% endif %}
+    {% if user.is_superuser %}
+        <button class="btn"><a href="{% url 'admin:index' %}">Admin Panel</a></button>
+    {% endif %}
     </div>
 </header>
 

@@ -38,6 +38,7 @@ header{
 nav{
     display:flex;
     gap:30px;
+    margin: 0 auto;
 }
 
 nav a{
@@ -53,8 +54,12 @@ nav a{
     padding:12px 20px;
     border-radius:30px;
     cursor:pointer;
+    margin: 0;
 }
-
+.btn a{
+    text-decoration: none;
+    color:white;
+}
 .hero{
     padding:100px 0;
     border-bottom:1px solid #eee;
@@ -434,3 +439,5 @@ body{
     }
 
 }
+
+
