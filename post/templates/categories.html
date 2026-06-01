@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="categories-page">
+
+    <div class="container">
+
+        <div class="page-header">
+            <h1>Explore Categories</h1>
+
+            <p>
+                Discover articles from different topics and find what interests you most.
+            </p>
+        </div>
+        {% for category in category %}
+        <div class="categories-grid">
+
+            <a href="#" class="category-card">
+                <h3>{{ category.name }}</h3>
+                <p>{{category.post_set.count}}</p>
+            </a>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

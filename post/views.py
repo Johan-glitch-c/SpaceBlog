@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Post, Category
 
 
@@ -29,3 +29,11 @@ def post(request):
     }
 
     return render(request, 'posts.html', context)
+
+
+def category(request):
+    category=Category.objects.all()
+    posts = Post.objects.all()
+    context = {'posts': posts, 'category': category,}
+
+    return render(request,'categories.html',context)
