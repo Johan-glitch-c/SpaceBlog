@@ -85,14 +85,19 @@ nav a{
 }
 
 .hero-btn{
+    display:inline-block;
     margin-top:30px;
     background:#191919;
     color:white;
-    border:none;
+    text-decoration:none;
     padding:15px 35px;
     border-radius:30px;
     font-size:16px;
-    cursor:pointer;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    opacity:.9;
 }
 
 .hero-image{
@@ -440,4 +445,81 @@ body{
 
 }
 
+.about-hero{
+    padding:100px 0;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
 
+.about-hero h1{
+    font-size:64px;
+    margin-bottom:20px;
+}
+
+.about-hero p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.about-content{
+    padding:80px 0;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.about-card{
+    border:1px solid #eee;
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.about-card h2{
+    margin-bottom:15px;
+}
+
+.about-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.stats{
+    padding:80px 0;
+    background:#fafafa;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat-item h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.stat-item p{
+    color:#777;
+}
+
+@media(max-width:768px){
+
+    .about-hero h1{
+        font-size:42px;
+    }
+
+}

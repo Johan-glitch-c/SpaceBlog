@@ -18,7 +18,7 @@ from django.contrib import admin
 from post.views import index,post
 from django.urls import path
 from django.conf.urls.static import static
-from post.views import category,post_category
+from post.views import category,post_category,about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +27,6 @@ urlpatterns = [
     path('category/',category,name='category'),
 
     path('post_categories/<int:id>/',post_category,name='post_categories'),
+
+    path('about/',about,name='about'),
 ]

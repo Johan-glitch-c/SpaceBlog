@@ -44,3 +44,7 @@ def post_category(request,id):
     context={'posts':posts,'category_id':category_id}
 
     return render(request,'posts_by_categories.html',context)
+
+
+def about(request):
+    return render(request,'about.html')
