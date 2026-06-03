@@ -5,10 +5,10 @@ from pydantic import ValidationError as PydanticValidationError
 
 
 class User_Form(forms.Form):
-    username = forms.CharField(label='Username')
-    email = forms.EmailField(label='Email')
-    password1 = forms.CharField(label='Password',widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Repeat Password',widget=forms.PasswordInput)
+    username = forms.CharField(label='Username',widget=forms.TextInput(attrs={'placeholder':'Username'}))
+    email = forms.EmailField(label='Email',widget=forms.EmailInput(attrs={'placeholder':'Email'}))
+    password1 = forms.CharField(label='Password',widget=forms.PasswordInput(attrs={'placeholder':'Password'}))
+    password2 = forms.CharField(label='Repeat Password',widget=forms.PasswordInput(attrs={'placeholder':'Repeat Password'}))
 
 
     def clean(self):
