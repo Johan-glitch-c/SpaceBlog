@@ -1,0 +1,77 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="register-section">
+
+    <div class="register-card">
+
+        <div class="register-header">
+
+            <h1>Create Account</h1>
+
+            <p>
+                Join BlogSpace and start sharing your ideas with the world.
+            </p>
+
+        </div>
+
+        <form>
+
+            <div class="form-group">
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your username"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    placeholder="Create a password"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    placeholder="Repeat your password"
+                >
+            </div>
+
+            <button type="submit" class="register-btn">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="register-footer">
+
+            <p>
+                Already have an account?
+                <a href="#">Sign In</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

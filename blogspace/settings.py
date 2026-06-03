@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'post.apps.PostConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,3 +126,8 @@ STATIC_ROOT=    BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT= BASE_DIR / 'media'
+
+
+#Users
+
+# AUTH_USER_MODEL = 'users.User'
