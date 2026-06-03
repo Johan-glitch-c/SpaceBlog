@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from post.views import index,post
-from django.urls import path
+from django.urls import path,include
 from django.conf.urls.static import static
 from post.views import category,post_category,about
 from users.views import register
@@ -30,5 +30,5 @@ urlpatterns = [
 
     path('about/',about,name='about'),
 
-    path('register/',register,name='register'),
+    path('users/',include('users.url',namespace='users')),
 ]
