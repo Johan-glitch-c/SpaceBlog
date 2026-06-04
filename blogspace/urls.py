@@ -18,7 +18,7 @@ from django.contrib import admin
 from post.views import index,post
 from django.urls import path,include
 from django.conf.urls.static import static
-from post.views import category,post_category,about
+from post.views import category,post_category,about,post_detail
 from users.views import register
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +31,6 @@ urlpatterns = [
     path('about/',about,name='about'),
 
     path('users/',include('users.url',namespace='users')),
+
+    path('post/<slug:slug>/',post_detail,name='post'),
 ]

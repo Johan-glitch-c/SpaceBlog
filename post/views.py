@@ -48,3 +48,11 @@ def post_category(request,id):
 
 def about(request):
     return render(request,'about.html')
+
+def post_detail(request,slug):
+
+    post=get_object_or_404(Post,slug=slug)
+
+
+    context = {'post':post}
+    return render(request,'post-detail.html',context)

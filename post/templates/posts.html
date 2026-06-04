@@ -25,6 +25,7 @@
 
         <div class="posts-grid">
              {% for post in posts %}
+                 <a href="{% url 'post' post.slug %}">
             <article class="post-card">
                 <span class="category">{{post.category}}</span>
 
@@ -39,6 +40,7 @@
                     <span>{{ post.time_to_read}}</span>
                 </div>
             </article>
+                 </a>
 {% endfor %}
         </div>
 

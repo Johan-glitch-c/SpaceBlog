@@ -27,6 +27,7 @@
 
     <div class="container">
         {% for post in posts %}
+
         <div class="posts-grid">
 
             <article class="post-card">
@@ -44,7 +45,7 @@
                     {{ post.description}}
                 </p>
 
-                <a href="#" class="read-more">
+                <a href="{% url 'post' post.slug%}" class="read-more">
                     Read Article →
                 </a>
 
